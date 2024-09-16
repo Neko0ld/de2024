@@ -1,6 +1,6 @@
 Шпора для себя
 
-Содержание:
+### Содержание:
 
 - [1. Установка Avalonia](#1-установка-avalonia)
 - [2. Установка Dapper](#2-dapper)
@@ -12,6 +12,8 @@
 
 Прописать в командную строку (win + r => cmd)
 - dotnet new install Avalonia.Templates
+
+[↑ Содержание ↑](#содержание)
 
 ### <b>2. Dapper</b>
 
@@ -37,6 +39,8 @@ public class Globals
 }
 ```
 
+[↑ Содержание ↑](#содержание)
+
 ### <b>3. Интерфейс INotifyPropertyChanged</b>
 
 ```c#
@@ -52,6 +56,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 }
 ```
 
+[↑ Содержание ↑](#содержание)
+
 ### <b>4. MessageBox для Avalonia</b>
 
 Команда импорта:
@@ -66,6 +72,8 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 ```
 
 [Инструкция как пользоваться](https://github.com/AvaloniaCommunity/MessageBox.Avalonia)
+
+[↑ Содержание ↑](#содержание)
 
 ### <b> 5. База List</b>
 
@@ -87,3 +95,4 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     }
 ```
 
+[↑ Содержание ↑](#содержание)
