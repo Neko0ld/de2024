@@ -52,24 +52,32 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     // кнопка авторизации
     private string? res="";
-    //public List<User> resUserList;
     private async void Authorization_Button_OnClick(object? sender, RoutedEventArgs e)
     {
-        // throw new System.NotImplementedException();
-        
-        foreach (var item in userList)
+        if (userList.FirstOrDefault(u => u.login == LoginTextBox.Text) != null)
         {
-            res = item.userroleid.ToString().Where(i => item.login == LoginTextBox.Text).ToString();
-             
-            
-            
-             // resUserList.Add(item.ToString()
-             //     .Where(LoginTextBox => this.LoginTextBox.Text == item.login));
+            if (userList.FirstOrDefault(u => u.password == PasswordTextBox.Text) != null)
+            {
+                res = userList.FirstOrDefault(u => u.password == PasswordTextBox.Text)!.userroleid.ToString();
+            }
         }
         if (res == "1")
         {
-            var window = new HeadsOfTheDepartment();
+            var window = new HeadsOfTheDepartmentWindow();
             window.Show();
+            Close();
+        }
+        else if(res == "2")
+        {
+            var window = new OrganizerWindow();
+            window.Show();
+            Close();
+        }
+        else if (res == "3")
+        {
+            var window = new TechnicianWindow();
+            window.Show();
+            Close();
         }
         else
         {
@@ -78,5 +86,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 ButtonEnum.Ok);
             var result = await box.ShowAsync();
         }
+        
     }
 }

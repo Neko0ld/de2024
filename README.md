@@ -55,7 +55,7 @@
 
 ## Реализация интерфейсов
 
-![image](/image/2024-09-16%20023455.png)
+![image](/image/image.png)
 
 ![image](/image/)
 

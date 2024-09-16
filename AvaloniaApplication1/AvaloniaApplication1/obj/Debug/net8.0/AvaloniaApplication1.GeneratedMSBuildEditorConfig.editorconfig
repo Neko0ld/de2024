@@ -15,15 +15,21 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AvaloniaApplication1
-build_property.ProjectDir = D:\ava_de2024\AvaloniaApplication1\AvaloniaApplication1\
+build_property.ProjectDir = C:\Users\User\Desktop\wwork\de_2024\AvaloniaApplication1\AvaloniaApplication1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/ava_de2024/AvaloniaApplication1/AvaloniaApplication1/App.axaml]
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/ava_de2024/AvaloniaApplication1/AvaloniaApplication1/MainWindow.axaml]
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/ava_de2024/AvaloniaApplication1/AvaloniaApplication1/Windows/HeadsOfTheDepartment.axaml]
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/HeadsOfTheDepartmentWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/OrganizerWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/TechnicianWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
