@@ -22,7 +22,7 @@
             <TextBox
                 Name="LoginTextBox"
                 Width="150"
-                Text=""
+                Text="windle"
                 FontSize="18"
             />
             <TextBlock
@@ -34,7 +34,7 @@
             <TextBox
                 Name="PasswordTextBox"
                 Width="150"
-                Text=""
+                Text="2PAUAd0gMZ"
                 FontSize="18"
             />
             <Button

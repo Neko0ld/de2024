@@ -2,8 +2,109 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:model="using:AvaloniaApplication1.Classes"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.Windows.HeadsOfTheDepartmentWindow"
+        Name="root"
         Title="Заведующий подразделением">
-    Welcome to Avalonia!
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock
+            Grid.Row="0"
+            Text="orderid"
+            />
+        <TextBlock
+            Grid.Row="0"
+            Text="datecreation"
+        />
+        <TextBlock
+            Grid.Row="0"
+            Text="orderstatus"
+        />
+        <TextBlock
+            Grid.Row="0"
+            Text="nameconference"
+        />
+        <TextBlock
+            Grid.Row="0"
+            Text="amountguests"
+        />
+        <TextBlock
+            Grid.Row="0"
+            Text="equipment"
+        />
+        <TextBlock
+            Grid.Row="0"
+            Text="paymentstatus"
+        />
+        
+        <ListBox
+            Grid.Row="1"
+            x:DataType="model:Order"
+            ItemsSource="{Binding #root.orderList}"
+            >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <!-- обводка -->
+                    <Border
+                        BorderThickness="0"
+                        BorderBrush="Black"
+                        CornerRadius="1"
+                        >
+                        <Grid>
+                        <!-- колонки -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        
+                        <!-- данные -->
+                        <TextBlock
+                            Grid.Column="0"
+                            Text="{Binding orderid}"
+                            />
+                        <TextBlock
+                            Grid.Column="1"
+                            Text="{Binding datecreation}"
+                        />
+                        <TextBlock
+                            Grid.Column="2"
+                            Text="{Binding orderstatus}"
+                        />
+                        <TextBlock
+                            Grid.Column="3"
+                            Text="{Binding nameconference}"
+                        />
+                        <TextBlock
+                            Grid.Column="4"
+                            Text="{Binding amountguests}"
+                        />
+                        <TextBlock
+                            Grid.Column="5"
+                            Text="{Binding equipment}"
+                        />
+                        <TextBlock
+                            Grid.Column="6"
+                            Text="{Binding paymentstatus}"
+                        />
+                    </Grid>
+                    </Border>
+                    
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+        </ListBox>
+    </Grid>
+    
 </Window>
