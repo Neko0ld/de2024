@@ -1,12 +1,24 @@
 Шпора для себя
 
-<b>1. Dapper</b>
+Содержание:
+
+- [1. Установка Avalonia](#1-установка-avalonia)
+- [2. Установка Dapper](#2-dapper)
+- [3. Интерфейс INotifyPropertyChanged](#3-интерфейс-inotifypropertychanged)
+- [4. MessageBox для Avalonia](#4-messagebox-для-avalonia)
+- [5. База List](#5-база-list)
+
+### <b>1. Установка Avalonia</b>
+
+Прописать в командную строку (win + r => cmd)
+- dotnet new install Avalonia.Templates
+
+### <b>2. Dapper</b>
 
 Команды импорта:
 - dotnet add package MySqlConnector
 - dotnet add package Dapper
 
-Пример
 ```c#
 using (MySqlConnection database = new MySqlConnection(Globals.connectionString))
         {
@@ -25,7 +37,7 @@ public class Globals
 }
 ```
 
-<b>2. Интерфейс</b>
+### <b>3. Интерфейс INotifyPropertyChanged</b>
 
 ```c#
 public partial class MainWindow : Window, INotifyPropertyChanged
@@ -34,20 +46,28 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     private void Invalidate()
     {
         if (PropertyChanged != null)
-            PropertyChanged(this, new PropertyChangedEventArgs("userList"));
+            PropertyChanged(this, new PropertyChangedEventArgs("свой список"));
     }
     ...
 }
 ```
 
-<b>3. MessageBox для avalonia</b>
+### <b>4. MessageBox для Avalonia</b>
 
 Команда импорта:
 - dotnet add package MessageBox.Avalonia
 
+```c#
+  var box = MessageBoxManager
+            .GetMessageBoxStandard("Caption", "Are you sure you would like to delete appender_replace_page_1?",
+                ButtonEnum.YesNo);
+
+        var result = await box.ShowAsync();
+```
+
 [Инструкция как пользоваться](https://github.com/AvaloniaCommunity/MessageBox.Avalonia)
 
-<b> 4. База для списка</b>
+### <b> 5. База List</b>
 
 ```c#
     private List<User> _userList = null;
