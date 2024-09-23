@@ -3,27 +3,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:model="using:AvaloniaApplication1.Classes"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="450"
+        Width="350" Height="450"
         x:Class="AvaloniaApplication1.Windows.HeadsOfTheDepartmentWindow"
         Name="root"
         Title="Заведующий подразделением">
     
-    <Grid>
-        <Button
-            Name="ListOrderButton"
-            Click="ListOrderButton_OnClick"
+    <Grid
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        >
+        
+        <WrapPanel
+            Orientation="Vertical"
+            HorizontalAlignment="Center"
+            >
+            
+            <Button
+                Content="Список сотрудников"
+                HorizontalContentAlignment="Center"
+                Name="ListUserButton"
+                Click="ListUserButton_OnClick"
             />
+            <Button
+                Content="Список заказов"
+                Name="ListOrderButton"
+                Click="ListOrderButton_OnClick"
+            />
+            <Button
+                Content="Список смен"
+                Name="ListShiftButton"
+                Click="ListShiftButton_OnClick"
+                />
+        </WrapPanel>
     </Grid>
-    
-    
-    <!-- <DataGrid -->
-    <!--     ItemsSource="{Binding #root.orderList}" -->
-    <!--     AutoGenerateColumns="True" -->
-    <!--     BorderThickness="1" BorderBrush="Black" -->
-    <!--     GridLinesVisibility="All" -->
-    <!--     IsReadOnly="True" -->
-    <!--     > -->
-    <!--      -->
-    <!-- </DataGrid> -->
     
 </Window>

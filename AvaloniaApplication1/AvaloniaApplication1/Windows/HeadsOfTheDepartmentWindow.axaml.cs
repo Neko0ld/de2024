@@ -21,37 +21,30 @@ public partial class HeadsOfTheDepartmentWindow : Window, INotifyPropertyChanged
     }
     public HeadsOfTheDepartmentWindow()
     {
-        // запрос на заполнение списка заказов
-        using (MySqlConnection database = new MySqlConnection(Globals.connectionString))
-        {
-            orderList = database.Query<Order>(
-                "SELECT * " +
-                "FROM `order`").ToList();
-        }
         InitializeComponent();
     }
     
     
-    // список заказов
-    private List<Order> _orderList = null;
-    public List<Order> orderList
-    {
-        get
-        {
-            var res = _orderList;
-
-            return res;
-        }
-        set
-        {
-            _orderList = value;
-            Invalidate();
-        }
-    }
-
     // кнопка перехода к списку заказов
     private void ListOrderButton_OnClick(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        var window = new OrderListWindow();
+        window.Show();
+    }
+    
+    
+    // кнопка перехода к списку сотрудников
+    private void ListUserButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var window = new UserListWindow();
+        window.Show();
+    }
+
+    
+    // кнопка перехода к списку смен
+    private void ListShiftButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var window = new ShiftListWindow();
+        window.Show();
     }
 }

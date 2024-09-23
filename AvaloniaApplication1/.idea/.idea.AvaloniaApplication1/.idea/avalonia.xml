@@ -8,6 +8,8 @@
         <entry key="AvaloniaApplication1/Windows/HeadsOfTheDepartmentWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
         <entry key="AvaloniaApplication1/Windows/OrderListWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
         <entry key="AvaloniaApplication1/Windows/OrganizerWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
+        <entry key="AvaloniaApplication1/Windows/ShiftListWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
+        <entry key="AvaloniaApplication1/Windows/UserListWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
       </map>
     </option>
   </component>

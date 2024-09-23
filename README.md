@@ -57,7 +57,13 @@
 
 ![image](/image/image.png)
 
-![image](/image/)
+![image](/image/departmentWindow.png)
+
+![image](/image/userList.png)
+
+![image](/image/orderList.png)
+
+![image](/image/shiftList.png)
 
 ## Реализация функционала
 

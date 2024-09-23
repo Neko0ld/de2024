@@ -4,8 +4,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.Windows.OrderListWindow"
+        Name="root"
         Title="Список заказов">
     
         
-        
+        <DataGrid
+                ItemsSource="{Binding #root.orderList}"
+                AutoGenerateColumns="True"
+                BorderThickness="1" BorderBrush="Black"
+                GridLinesVisibility="All"
+                IsReadOnly="True"
+        >
+    
+        </DataGrid>
 </Window>

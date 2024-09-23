@@ -4,6 +4,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.Windows.ShiftListWindow"
-        Title="ShiftListWindow">
-    Welcome to Avalonia!
+        Name="root"
+        Title="Список смен">
+        
+        <DataGrid
+                ItemsSource="{Binding #root.shiftList}"
+                AutoGenerateColumns="True"
+                BorderThickness="1" BorderBrush="Black"
+                GridLinesVisibility="All"
+                IsReadOnly="True"
+        >
+    
+        </DataGrid>
+        
 </Window>
