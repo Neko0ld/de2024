@@ -5,5 +5,23 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.Windows.OrganizerWindow"
         Title="Организатор">
-    Welcome to Avalonia!
+    
+    
+    <Grid
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+    >
+        
+        <WrapPanel
+            Orientation="Vertical"
+            HorizontalAlignment="Center"
+        >
+            
+            <Button
+                Content="Список заказов"
+                Name="ListOrderButton"
+                Click="ListOrderButton_OnClick"
+            />
+        </WrapPanel>
+    </Grid>
 </Window>

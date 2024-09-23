@@ -60,7 +60,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         {
             if (userList.FirstOrDefault(u => u.password == PasswordTextBox.Text) != null)
             {
-                res = userList.FirstOrDefault(u => u.password == PasswordTextBox.Text)!.userroleid.ToString();
+                res = userList.FirstOrDefault(u => u.login == LoginTextBox.Text)!.userroleid.ToString();
             }
         }
         if (res == "1")
