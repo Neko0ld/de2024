@@ -28,6 +28,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/HeadsOfTheDepartmentWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/OrderListWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/OrganizerWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

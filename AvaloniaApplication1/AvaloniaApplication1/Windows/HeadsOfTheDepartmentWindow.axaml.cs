@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using AvaloniaApplication1.Classes;
 using Dapper;
@@ -30,6 +31,7 @@ public partial class HeadsOfTheDepartmentWindow : Window, INotifyPropertyChanged
         InitializeComponent();
     }
     
+    
     // список заказов
     private List<Order> _orderList = null;
     public List<Order> orderList
@@ -45,5 +47,11 @@ public partial class HeadsOfTheDepartmentWindow : Window, INotifyPropertyChanged
             _orderList = value;
             Invalidate();
         }
+    }
+
+    // кнопка перехода к списку заказов
+    private void ListOrderButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        throw new System.NotImplementedException();
     }
 }

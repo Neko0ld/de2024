@@ -9,102 +9,21 @@
         Title="Заведующий подразделением">
     
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        
-        <TextBlock
-            Grid.Row="0"
-            Text="orderid"
+        <Button
+            Name="ListOrderButton"
+            Click="ListOrderButton_OnClick"
             />
-        <TextBlock
-            Grid.Row="0"
-            Text="datecreation"
-        />
-        <TextBlock
-            Grid.Row="0"
-            Text="orderstatus"
-        />
-        <TextBlock
-            Grid.Row="0"
-            Text="nameconference"
-        />
-        <TextBlock
-            Grid.Row="0"
-            Text="amountguests"
-        />
-        <TextBlock
-            Grid.Row="0"
-            Text="equipment"
-        />
-        <TextBlock
-            Grid.Row="0"
-            Text="paymentstatus"
-        />
-        
-        <ListBox
-            Grid.Row="1"
-            x:DataType="model:Order"
-            ItemsSource="{Binding #root.orderList}"
-            >
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <!-- обводка -->
-                    <Border
-                        BorderThickness="0"
-                        BorderBrush="Black"
-                        CornerRadius="1"
-                        >
-                        <Grid>
-                        <!-- колонки -->
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        
-                        
-                        <!-- данные -->
-                        <TextBlock
-                            Grid.Column="0"
-                            Text="{Binding orderid}"
-                            />
-                        <TextBlock
-                            Grid.Column="1"
-                            Text="{Binding datecreation}"
-                        />
-                        <TextBlock
-                            Grid.Column="2"
-                            Text="{Binding orderstatus}"
-                        />
-                        <TextBlock
-                            Grid.Column="3"
-                            Text="{Binding nameconference}"
-                        />
-                        <TextBlock
-                            Grid.Column="4"
-                            Text="{Binding amountguests}"
-                        />
-                        <TextBlock
-                            Grid.Column="5"
-                            Text="{Binding equipment}"
-                        />
-                        <TextBlock
-                            Grid.Column="6"
-                            Text="{Binding paymentstatus}"
-                        />
-                    </Grid>
-                    </Border>
-                    
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-            
-        </ListBox>
     </Grid>
+    
+    
+    <!-- <DataGrid -->
+    <!--     ItemsSource="{Binding #root.orderList}" -->
+    <!--     AutoGenerateColumns="True" -->
+    <!--     BorderThickness="1" BorderBrush="Black" -->
+    <!--     GridLinesVisibility="All" -->
+    <!--     IsReadOnly="True" -->
+    <!--     > -->
+    <!--      -->
+    <!-- </DataGrid> -->
     
 </Window>

@@ -33,6 +33,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         InitializeComponent();
     }
     
+    
     // список пользователей
     private List<User> _userList = null;
     public List<User> userList
@@ -50,6 +51,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
     }
 
+    
     // кнопка авторизации
     private string? res="";
     private async void Authorization_Button_OnClick(object? sender, RoutedEventArgs e)

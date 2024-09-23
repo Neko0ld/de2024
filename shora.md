@@ -7,6 +7,7 @@
 - [3. Интерфейс INotifyPropertyChanged](#3-интерфейс-inotifypropertychanged)
 - [4. MessageBox для Avalonia](#4-messagebox-для-avalonia)
 - [5. База List](#5-база-list)
+- [6. Data Grid](#6-data-grid)
 
 ### <b>1. Установка Avalonia</b>
 
@@ -93,6 +94,56 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             Invalidate();
         }
     }
+```
+
+[↑ Содержание ↑](#содержание)
+
+### <b> 6. Data Grid</b>
+
+Команда импорта:
+- dotnet add package Avalonia.Controls.DataGrid
+
+
+
+Include Data Grid Styles
+
+You must reference the data grid themes to include the additional styles that the data grid uses. You can do this by adding a <StyleInclude> element to the application (App.axaml file).
+
+```c#
+<Application.Styles>
+    <FluentTheme />
+    <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
+</Application.Styles>
+```
+
+Пример с автогенерацией:
+```c#
+<DataGrid
+        ItemsSource="{Binding #root.orderList}"
+        AutoGenerateColumns="True"
+        BorderThickness="1" BorderBrush="Black"
+        GridLinesVisibility="All"
+        IsReadOnly="True"
+        >
+        
+    </DataGrid>
+```
+
+Пример с ручной разметкой:
+```c#
+<DataGrid Margin="20" ItemsSource="{Binding People}"
+          //CanUserReorderColumns="True"
+          //CanUserResizeColumns="True"
+          //CanUserSortColumns="False"
+          BorderThickness="1" BorderBrush="Gray"
+          GridLinesVisibility="All"
+          IsReadOnly="True"
+          >
+  <DataGrid.Columns>
+     <DataGridTextColumn Header="First Name"  Binding="{Binding FirstName}"/>
+     <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+  </DataGrid.Columns>
+</DataGrid>
 ```
 
 [↑ Содержание ↑](#содержание)
