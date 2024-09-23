@@ -8,6 +8,7 @@
 - [4. MessageBox для Avalonia](#4-messagebox-для-avalonia)
 - [5. База List](#5-база-list)
 - [6. Data Grid](#6-data-grid)
+- [7. Открытие нового окна](#7-открытие-нового-окна)
 
 ### <b>1. Установка Avalonia</b>
 
@@ -76,7 +77,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
 [↑ Содержание ↑](#содержание)
 
-### <b> 5. База List</b>
+### <b>5. База List</b>
 
 ```c#
     private List<User> _userList = null;
@@ -98,7 +99,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
 [↑ Содержание ↑](#содержание)
 
-### <b> 6. Data Grid</b>
+### <b>6. Data Grid</b>
 
 Команда импорта:
 - dotnet add package Avalonia.Controls.DataGrid
@@ -144,6 +145,17 @@ You must reference the data grid themes to include the additional styles that th
      <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
   </DataGrid.Columns>
 </DataGrid>
+```
+
+[↑ Содержание ↑](#содержание)
+
+### <b>7. Открытие нового окна</b>
+
+```c#
+    var window = new OrganizerWindow();
+    window.Show();
+    // закрытие текущего
+    Close();
 ```
 
 [↑ Содержание ↑](#содержание)
