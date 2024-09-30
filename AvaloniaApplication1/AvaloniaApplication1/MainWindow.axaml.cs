@@ -53,14 +53,29 @@ public partial class MainWindow : Window, INotifyPropertyChanged
 
     
     // кнопка авторизации
-    private string? res="";
+    private User currentUser = null;
+    private string res = "";
     private async void Authorization_Button_OnClick(object? sender, RoutedEventArgs e)
     {
-        if (userList.FirstOrDefault(u => u.login == LoginTextBox.Text) != null)
+        // if (userList.FirstOrDefault(u => u.login == LoginTextBox.Text) != null)
+        // {
+        //     if (userList.FirstOrDefault(u => u.password == PasswordTextBox.Text) != null)
+        //     {
+        //         currentUser = userList.FirstOrDefault(u => u.login == LoginTextBox.Text);
+        //         res = currentUser.userroleid.ToString();
+        //     }
+        // }
+
+        foreach (var user in userList)
         {
-            if (userList.FirstOrDefault(u => u.password == PasswordTextBox.Text) != null)
+            if (user.login == LoginTextBox.Text)
             {
-                res = userList.FirstOrDefault(u => u.login == LoginTextBox.Text)!.userroleid.ToString();
+                if (user.password == PasswordTextBox.Text)
+                {
+                    currentUser = user;
+                    res = currentUser.userroleid.ToString();
+                    break;
+                }
             }
         }
         if (res == "1")
