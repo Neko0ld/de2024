@@ -9,6 +9,7 @@
 - [5. База List](#5-база-list)
 - [6. Data Grid](#6-data-grid)
 - [7. Открытие нового окна](#7-открытие-нового-окна)
+- [8. Авторизация](#8-авторизация)
 
 ### <b>1. Установка Avalonia</b>
 
@@ -156,6 +157,57 @@ You must reference the data grid themes to include the additional styles that th
     window.Show();
     // закрытие текущего
     Close();
+```
+
+[↑ Содержание ↑](#содержание)
+
+### <b>8. Авторизация</b>
+
+```c#
+// кнопка авторизации
+    private User currentUser = null;
+    private string res = "";
+    private async void Authorization_Button_OnClick(object? sender, RoutedEventArgs e)
+    {
+        foreach (var user in userList)
+        {
+            if (user.login == LoginTextBox.Text)
+            {
+                if (user.password == PasswordTextBox.Text)
+                {
+                    currentUser = user;
+                    res = currentUser.userroleid.ToString();
+                    break;
+                }
+            }
+        }
+        if (res == "1")
+        {
+            var window = new HeadsOfTheDepartmentWindow();
+            window.Show();
+            Close();
+        }
+        else if(res == "2")
+        {
+            var window = new OrganizerWindow();
+            window.Show();
+            Close();
+        }
+        else if (res == "3")
+        {
+            var window = new TechnicianWindow();
+            window.Show();
+            Close();
+        }
+        else
+        {
+            var box = MessageBoxManager.GetMessageBoxStandard(
+                "Ошибка", "Такого пользователя не существует",
+                ButtonEnum.Ok);
+            var result = await box.ShowAsync();
+        }
+        
+    }
 ```
 
 [↑ Содержание ↑](#содержание)
