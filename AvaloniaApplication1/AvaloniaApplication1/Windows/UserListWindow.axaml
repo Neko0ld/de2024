@@ -2,19 +2,61 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:classes="clr-namespace:AvaloniaApplication1.Classes"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication1.Windows.UserListWindow"
         Name="root"
         Title="Список сотрудников">
     
-    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <WrapPanel
+            Grid.Row="0"
+            >
+            <Button
+                Name="UpdateUserListButton"
+                Content="Изменить"
+                Click="UpdateUserListButton_OnClick"
+                />
+            
+        </WrapPanel>
+        
+        
         <DataGrid
-                ItemsSource="{Binding #root.userList}"
-                AutoGenerateColumns="True"
-                BorderThickness="1" BorderBrush="Black"
-                GridLinesVisibility="All"
-                IsReadOnly="True"
-        >
-    
+            Grid.Row="1"
+            ItemsSource="{Binding #root.userList}"
+            AutoGenerateColumns="False"
+            BorderThickness="1" BorderBrush="Black"
+            GridLinesVisibility="All"
+            IsReadOnly="False">
+        
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding userid}"
+                                    x:DataType="classes:User" IsReadOnly="True" />
+                <DataGridTextColumn Header="Логин" Binding="{Binding login}"
+                                    x:DataType="classes:User" IsReadOnly="True" />
+                <DataGridTextColumn Header="Пароль" Binding="{Binding password}"
+                                    x:DataType="classes:User" IsReadOnly="True" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding status}"
+                                    x:DataType="classes:User" IsReadOnly="False" />
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding lastname}"
+                                    x:DataType="classes:User" IsReadOnly="True" />
+                <DataGridTextColumn Header="Имя" Binding="{Binding firstname}"
+                                    x:DataType="classes:User" IsReadOnly="True" />
+                <DataGridTextColumn Header="Отчество" Binding="{Binding middlename}"
+                                    x:DataType="classes:User" IsReadOnly="True" />
+                <DataGridTextColumn Header="Роль" Binding="{Binding userroleidString}"
+                                    x:DataType="classes:User" IsReadOnly="True" />
+            </DataGrid.Columns>
+        
+                
+                
         </DataGrid>
+    </Grid>
+    
+    
 </Window>

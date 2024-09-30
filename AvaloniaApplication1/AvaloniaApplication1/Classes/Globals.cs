@@ -2,5 +2,6 @@
 
 public class Globals
 {
-    public static string connectionString = "Server=kolei.ru; User ID=asmorkalov; Password=230602; Database=asmorkalov_de2024";
+    public static string connectionString = "Server=kolei.ru; User ID=asmorkalov; Password=230602; " +
+                                            "Database=asmorkalov_de2024; Allow User Variables=true";
 }

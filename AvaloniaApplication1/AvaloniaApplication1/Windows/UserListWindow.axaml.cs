@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using AvaloniaApplication1.Classes;
 using Dapper;
@@ -24,8 +25,10 @@ public partial class UserListWindow : Window, INotifyPropertyChanged
         using (MySqlConnection database = new MySqlConnection(Globals.connectionString))
         {
             userList = database.Query<User>(
-                "SELECT * " +
-                "FROM `user`").ToList();
+                "SELECT u.userid, u.login, u.password, u.status, u.lastname, u.firstname, u.middlename, " +
+                "u.userroleid, ur.namerole AS userroleidString " +
+                "FROM `user` u, `userrole` ur " +
+                "WHERE u.userroleid = ur.userroleid").ToList();
         }
         InitializeComponent();
     }
@@ -38,7 +41,7 @@ public partial class UserListWindow : Window, INotifyPropertyChanged
         get
         {
             var res = _userList;
-
+            
             return res;
         }
         set
@@ -46,5 +49,19 @@ public partial class UserListWindow : Window, INotifyPropertyChanged
             _userList = value;
             Invalidate();
         }
+    }
+
+    // кнопка изменить в бд
+    private void UpdateUserListButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        foreach (User user in userList)
+        {
+            using (MySqlConnection database = new MySqlConnection(Globals.connectionString))
+            {
+                database.Execute("UPDATE `user` SET status = @status " +
+                                 "WHERE userid = @userid", user);
+            }
+        }
+        
     }
 }

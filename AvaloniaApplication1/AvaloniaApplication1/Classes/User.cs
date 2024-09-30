@@ -10,4 +10,7 @@ public class User
     public string? firstname { get; set; }
     public string? middlename { get; set; }
     public int userroleid { get; set; }
+    
+    // кастомные
+    public string userroleidString { get; set; }
 }

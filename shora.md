@@ -11,6 +11,8 @@
 - [7. Открытие нового окна](#7-открытие-нового-окна)
 - [8. Авторизация](#8-авторизация)
 
+https://github.com/kolei/PiRIS/blob/master/articles/sprint_lab.md
+
 ### <b>1. Установка Avalonia</b>
 
 Прописать в командную строку (win + r => cmd)

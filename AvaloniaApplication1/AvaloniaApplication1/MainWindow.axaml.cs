@@ -57,15 +57,6 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     private string res = "";
     private async void Authorization_Button_OnClick(object? sender, RoutedEventArgs e)
     {
-        // if (userList.FirstOrDefault(u => u.login == LoginTextBox.Text) != null)
-        // {
-        //     if (userList.FirstOrDefault(u => u.password == PasswordTextBox.Text) != null)
-        //     {
-        //         currentUser = userList.FirstOrDefault(u => u.login == LoginTextBox.Text);
-        //         res = currentUser.userroleid.ToString();
-        //     }
-        // }
-
         foreach (var user in userList)
         {
             if (user.login == LoginTextBox.Text)
