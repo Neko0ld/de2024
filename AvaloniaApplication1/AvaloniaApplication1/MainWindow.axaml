@@ -11,41 +11,21 @@
     <Grid>
         <WrapPanel
             Orientation="Vertical"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-        >
-            <TextBlock
-                HorizontalAlignment="Center"
-                Text="Логин"
-                FontSize="18"
-            />
-            <TextBox
-                Name="LoginTextBox"
-                Width="150"
-                Text="windle"
-                FontSize="18"
-            />
-            <TextBlock
-                HorizontalAlignment="Center"
-                Margin="0,5,0,0"
-                Text="Пароль"
-                FontSize="18"
-            />
-            <TextBox
-                Name="PasswordTextBox"
-                Width="150"
-                Text="2PAUAd0gMZ"
-                FontSize="18"
-            />
-            <Button
-                HorizontalAlignment="Center"
-                Margin="0, 5, 0, 0"
-                Content="Авторизация"
-                FontSize="18"
-                Click="Authorization_Button_OnClick"
-            />
+            HorizontalAlignment="Center" VerticalAlignment="Center">
             
+            <TextBlock Text="Логин"
+                       FontSize="18" HorizontalAlignment="Center"/>
+            <TextBox Name="LoginTextBox" Text="windle"
+                     FontSize="18" Width="150"/>
+            
+            <TextBlock Text="Пароль" 
+                       FontSize="18" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBox Name="PasswordTextBox" Text="2PAUAd0gMZ"
+                     FontSize="18" Width="150"/>
+            
+            <Button Content="Авторизация"
+                    FontSize="18" HorizontalAlignment="Center" Margin="0, 5, 0, 0"
+                    Click="Authorization_Button_OnClick"/>
         </WrapPanel>
-        
     </Grid>
 </Window>

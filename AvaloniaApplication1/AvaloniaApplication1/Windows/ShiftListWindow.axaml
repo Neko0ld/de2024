@@ -9,12 +9,8 @@
         
         <DataGrid
                 ItemsSource="{Binding #root.shiftList}"
-                AutoGenerateColumns="True"
-                BorderThickness="1" BorderBrush="Black"
-                GridLinesVisibility="All"
-                IsReadOnly="True"
-        >
+                AutoGenerateColumns="True" IsReadOnly="True"
+                GridLinesVisibility="All" BorderThickness="1" BorderBrush="Black">
     
         </DataGrid>
-        
 </Window>

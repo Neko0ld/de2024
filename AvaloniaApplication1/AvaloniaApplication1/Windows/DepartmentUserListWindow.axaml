@@ -4,24 +4,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:classes="clr-namespace:AvaloniaApplication1.Classes"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaApplication1.Windows.UserListWindow"
+        x:Class="AvaloniaApplication1.Windows.DepartmentUserListWindow"
         Name="root"
         Title="Список сотрудников">
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
         <WrapPanel
-            Grid.Row="0"
-            >
-            <Button
-                Name="UpdateUserListButton"
-                Content="Изменить"
-                Click="UpdateUserListButton_OnClick"
-                />
+            Grid.Row="0">
+            
+            <Button Name="UpdateUserListButton" Content="Изменить"
+                    Click="UpdateUserListButton_OnClick"/>
+            <Button Name="AddUserListButton" Content="Добавить"
+                    Click="AddUserListButton_OnClick"/>
             
         </WrapPanel>
         
@@ -29,10 +28,9 @@
         <DataGrid
             Grid.Row="1"
             ItemsSource="{Binding #root.userList}"
-            AutoGenerateColumns="False"
-            BorderThickness="1" BorderBrush="Black"
-            GridLinesVisibility="All"
-            IsReadOnly="False">
+            AutoGenerateColumns="False" IsReadOnly="False"
+            GridLinesVisibility="All" BorderThickness="1" BorderBrush="Black"
+            >
         
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding userid}"
@@ -52,11 +50,6 @@
                 <DataGridTextColumn Header="Роль" Binding="{Binding userroleidString}"
                                     x:DataType="classes:User" IsReadOnly="True" />
             </DataGrid.Columns>
-        
-                
-                
         </DataGrid>
     </Grid>
-    
-    
 </Window>

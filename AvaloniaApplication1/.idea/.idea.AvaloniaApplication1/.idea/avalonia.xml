@@ -5,6 +5,8 @@
       <map>
         <entry key="AvaloniaApplication1/App.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
         <entry key="AvaloniaApplication1/MainWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
+        <entry key="AvaloniaApplication1/Windows/DepartmentAddUserListWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
+        <entry key="AvaloniaApplication1/Windows/DepartmentUserListWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
         <entry key="AvaloniaApplication1/Windows/HeadsOfTheDepartmentWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
         <entry key="AvaloniaApplication1/Windows/OrderListWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />
         <entry key="AvaloniaApplication1/Windows/OrganizerWindow.axaml" value="AvaloniaApplication1/AvaloniaApplication1.csproj" />

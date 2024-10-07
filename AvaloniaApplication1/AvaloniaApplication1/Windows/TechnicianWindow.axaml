@@ -7,21 +7,13 @@
         Title="Техник">
     
     <Grid
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        >
+        HorizontalAlignment="Center" VerticalAlignment="Center">
         
         <WrapPanel
-            Orientation="Vertical"
-            HorizontalAlignment="Center"
-            >
+            Orientation="Vertical" HorizontalAlignment="Center">
             
-            <Button
-                Content="Список заказов"
-                Name="ListOrderButton"
-                Click="ListOrderButton_OnClick"
-            />
+            <Button Name="ListOrderButton" Content="Список заказов"
+                    Click="ListOrderButton_OnClick"/>
         </WrapPanel>
     </Grid>
-    
 </Window>

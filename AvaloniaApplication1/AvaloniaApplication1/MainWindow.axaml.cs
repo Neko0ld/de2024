@@ -55,7 +55,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     // кнопка авторизации
     private User currentUser = null;
     private string res = "";
-    private async void Authorization_Button_OnClick(object? sender, RoutedEventArgs e)
+    private void Authorization_Button_OnClick(object? sender, RoutedEventArgs e)
     {
         foreach (var user in userList)
         {
@@ -89,10 +89,9 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         }
         else
         {
-            var box = MessageBoxManager.GetMessageBoxStandard(
-                "Ошибка", "Такого пользователя не существует",
-                ButtonEnum.Ok);
-            var result = await box.ShowAsync();
+            var mbox = MessageBoxManager.GetMessageBoxStandard(
+                "Ошибка", "Такого пользователя не существует", ButtonEnum.Ok);
+            mbox.ShowAsync();
         }
         
     }

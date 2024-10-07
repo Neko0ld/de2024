@@ -7,11 +7,13 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using AvaloniaApplication1.Classes;
 using Dapper;
+using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
 using MySqlConnector;
 
 namespace AvaloniaApplication1.Windows;
 
-public partial class UserListWindow : Window, INotifyPropertyChanged
+public partial class DepartmentUserListWindow : Window, INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;
     private void Invalidate()
@@ -19,7 +21,7 @@ public partial class UserListWindow : Window, INotifyPropertyChanged
         if (PropertyChanged != null)
             PropertyChanged(this, new PropertyChangedEventArgs("userList"));
     }
-    public UserListWindow()
+    public DepartmentUserListWindow()
     {
         // запрос на заполнение списка сотрудников
         using (MySqlConnection database = new MySqlConnection(Globals.connectionString))
@@ -51,7 +53,8 @@ public partial class UserListWindow : Window, INotifyPropertyChanged
         }
     }
 
-    // кнопка изменить в бд
+    
+    // кнопка изменить статус пользователя
     private void UpdateUserListButton_OnClick(object? sender, RoutedEventArgs e)
     {
         foreach (User user in userList)
@@ -62,6 +65,17 @@ public partial class UserListWindow : Window, INotifyPropertyChanged
                                  "WHERE userid = @userid", user);
             }
         }
-        
+
+        var mbox = MessageBoxManager.GetMessageBoxStandard(
+            "Выполнено", "Выполнено", ButtonEnum.Ok);
+        mbox.ShowAsync();
+    }
+
+    
+    // кнопка добавить нового пользователя
+    private void AddUserListButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var window = new DepartmentAddUserListWindow();
+        window.Show();
     }
 }

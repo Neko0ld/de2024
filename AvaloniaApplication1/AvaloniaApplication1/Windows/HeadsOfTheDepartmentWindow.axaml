@@ -10,31 +10,17 @@
         Title="Заведующий подразделением">
     
     <Grid
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        >
+        HorizontalAlignment="Center" VerticalAlignment="Center">
         
         <WrapPanel
-            Orientation="Vertical"
-            HorizontalAlignment="Center"
-            >
+            Orientation="Vertical" HorizontalAlignment="Center">
             
-            <Button
-                Content="Список сотрудников"
-                HorizontalContentAlignment="Center"
-                Name="ListUserButton"
-                Click="ListUserButton_OnClick"
-            />
-            <Button
-                Content="Список заказов"
-                Name="ListOrderButton"
-                Click="ListOrderButton_OnClick"
-            />
-            <Button
-                Content="Список смен"
-                Name="ListShiftButton"
-                Click="ListShiftButton_OnClick"
-                />
+            <Button Name="ListUserButton" Content="Список сотрудников"
+                    Click="ListUserButton_OnClick"/>
+            <Button Name="ListOrderButton" Content="Список заказов"
+                    Click="ListOrderButton_OnClick"/>
+            <Button Name="ListShiftButton" Content="Список смен"
+                    Click="ListShiftButton_OnClick"/>
         </WrapPanel>
     </Grid>
     

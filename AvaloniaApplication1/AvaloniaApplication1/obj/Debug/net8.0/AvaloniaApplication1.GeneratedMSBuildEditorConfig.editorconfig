@@ -25,6 +25,12 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/DepartmentAddUserListWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/DepartmentUserListWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/HeadsOfTheDepartmentWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -38,7 +44,4 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/TechnicianWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/User/Desktop/wwork/de_2024/AvaloniaApplication1/AvaloniaApplication1/Windows/UserListWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

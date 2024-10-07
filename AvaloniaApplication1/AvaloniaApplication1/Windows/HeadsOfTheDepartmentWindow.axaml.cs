@@ -36,7 +36,7 @@ public partial class HeadsOfTheDepartmentWindow : Window, INotifyPropertyChanged
     // кнопка перехода к списку сотрудников
     private void ListUserButton_OnClick(object? sender, RoutedEventArgs e)
     {
-        var window = new UserListWindow();
+        var window = new DepartmentUserListWindow();
         window.Show();
     }
 
